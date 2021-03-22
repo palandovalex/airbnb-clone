@@ -1,0 +1,19 @@
+
+{% load i18n %}
+<div class="flex flex-col w-full mb-2">
+    <a href="{% url 'users:github-login' %}" class="btn mb-1 border-green-700 text-gray-700">
+        <i class="fab fa-github-alt -ml-6 mr-2"></i>{% trans 'Continnue with Github' %}
+    </a>
+    
+    {% if google_auth_realised %}
+        <a href="{% url 'users:google-login' %}" class="btn border-blue-500  bg-blue-500 text-white">
+            <i class="fab fa-google  -ml-5 mr-1 text-red-500 bg-white rounded-md px-0.5 py-0.5"></i>{% trans 'Continnue with Google' %}
+        </a>
+    {% endif %}
+         
+</div>
+<div class="flex items-center w-full justify-center my-2">
+    <div class="h-px bg-gray-300 w-full"></div>
+    <span class="text-gray-600 font-medium mx-2 text-sm">{% trans 'or' %}</span>
+    <div class="h-px bg-gray-300 w-full"></div>
+</div>

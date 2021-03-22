@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+django = "==2.2.5"
+django-countries = "*"
+django-seed = "*"
+pylint-django = "*"
+requests = "*"
+
+[requires]
+python_version = "3.8"

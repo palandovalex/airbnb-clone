@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-18 21:23+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: templates/base.html:25
+msgid "Search by City"
+msgstr "Поиск по городу"
+
+#: templates/mixins/room_card.html:18
+msgid "SUPERHOST"
+msgstr "СУПЕРХОЗЯИН"
+
+#: templates/partials/footer.html:5
+msgid "Please don't copy us ;("
+msgstr "Пожалуйста, не копируйте нас ;("
+
+#: templates/partials/footer.html:7
+msgid "All rights reserved."
+msgstr "Все права защищены."
+
+#: templates/partials/nav.html:8
+msgid "Stop hosting"
+msgstr "Режим гостя"
+
+#: templates/partials/nav.html:10
+msgid "Start hosting"
+msgstr "Режим арендатора"
+
+#: templates/partials/nav.html:16 templates/rooms/room_create.html:5
+msgid "Create Room"
+msgstr "Создание комнаты"
+
+#: templates/partials/nav.html:21
+msgid "Profile"
+msgstr "Профиль"
+
+#: templates/partials/nav.html:22
+msgid "Log Out"
+msgstr "Выйти"
+
+#: templates/partials/nav.html:25
+msgid "Log In"
+msgstr "Войти"
+
+#: templates/partials/nav.html:26
+msgid "Sign Up"
+msgstr "Регистрация"
+
+#: templates/partials/sotial_login.html:5
+msgid "Continnue with Github"
+msgstr "Продолжить с Гитхабом"
+
+#: templates/partials/sotial_login.html:8
+msgid "Continnue with Google"
+msgstr "Продолжить с Гуглом"
+
+#: templates/partials/sotial_login.html:13
+msgid "or"
+msgstr "или"
+
+#: templates/reservations/detail.html:5
+msgid "Reservation"
+msgstr "Бронирование"
+
+#: templates/reservations/detail.html:26
+msgid "Contact your Airbnb Host"
+msgstr "Связь с вашим Airbnb хозяином "
+
+#: templates/reservations/detail.html:27
+msgid "Send a Message"
+msgstr "Послать сообщение"
+
+#: templates/reservations/detail.html:35
+msgid "Write your review"
+msgstr "Напишите ваш отзыв"
+
+#: templates/reservations/detail.html:39
+msgid "Submit Review"
+msgstr "Отправить отзыв"
+
+#: templates/reservations/detail.html:42
+msgid "Cancel Reservation"
+msgstr "Отменить бронирование"
+
+#: templates/reservations/detail.html:44
+msgid "Confirm Reservation"
+msgstr "Подтвердить бронирование"
+
+#: templates/rooms/photo_create.html:5
+msgid "Upload Photo"
+msgstr "Загрузить фото"
+
+#: templates/rooms/photo_edit.html:6
+msgid "Update Photo"
+msgstr "Обновить фото"
+
+#: templates/rooms/room_delete.html:5
+msgid "Delete Room"
+msgstr "Удаление комнаты"
+
+#: templates/rooms/room_delete.html:13
+msgid "Are you sure you want to delete room"
+msgstr "Вы уверены, что хотите удалить комнату"
+
+#: templates/rooms/room_delete.html:16
+msgid "Cancel"
+msgstr "Отменить"
+
+#: templates/rooms/room_list.html:28
+#, python-format
+msgid "Page %(current_page)s of %(page_count)s"
+msgstr "Страница %(current_page)s из %(page_count)s"
+
+#: users/mixins.py:10 users/mixins.py:20
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+#: users/mixins.py:15 users/mixins.py:24
+msgid "Can't go there"
+msgstr "Нет доступа"
+
+#: users/models.py:26
+msgid "Male"
+msgstr "Мужской"
+
+#: users/models.py:27
+msgid "Female"
+msgstr "Женский"
+
+#: users/models.py:28
+msgid "Uncpecified"
+msgstr "Не указан"
+
+#: users/models.py:34
+msgid "English"
+msgstr "Английский"
+
+#: users/models.py:35
+msgid "Russian"
+msgstr "Русский"
+
+#: users/models.py:61
+msgid "gender"
+msgstr "пол"
+
+#: users/models.py:64
+msgid "bio"
+msgstr "биография"
+
+#: users/models.py:90
+msgid "Verify airbnb-clone account"
+msgstr "Подтверждение  airbnb-clone аккаунт"

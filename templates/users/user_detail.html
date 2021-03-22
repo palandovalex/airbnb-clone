@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block page_title %}
+    {% if current_user.first_name %}
+        {{current_user.first_name}}'s Profile
+    {% else %}
+        {{current_user.username}}'s Profile
+    {% endif %}
+{% endblock page_title %}
+    
+
+{% block content %}
+    <div class="">
+        <div class="container lg:w-5/12 md:w-1/2 xl:w-1/4 mx-auto my-10 flex flex-col items-center border p-6 border-gray-400">
+            
+            {% include "mixins/user_avatar.html" with user=current_user %}
+            <div class="flex items-center">
+                <span class="text-3xl mt-1">{{current_user.first_name}}</span>
+                    {% if current_user.superhost %}
+                <i class="ml-3 fas fa-check-circle text-green-300 text-2xl"></i>
+                    {% else %}
+                    
+                    {% endif %}
+            </div>
+                    
+            
+            
+            <span class="text-lg">{{current_user.bio}}</span>
+            <span >{{current_user.email}}</span>
+            
+            {% if user == current_user %}
+            <a href="{% url 'users:update' %}" class="btn-link mt-3">Edit Profile</a>
+            {% endif %}
+            
+        </div>
+        
+        {% if current_user.reservations.count %}
+            <div class="container mx-auto pb-10 flex-col flex items-center">
+                <h3 class="mb-12 text-2xl">{{current_user.first_name}}'s Reserved Rooms</h3>
+                <div class="flex flex-wrap -mx-40">
+                    {% for reservation in current_user.reservations.all %}
+                        {% include 'mixins/room_card.html' with room=reservation.room reservation=reservation %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+
+        {% if current_user.rooms.count %}
+            <div class="container mx-auto pb-10 flex-col flex items-center">
+                <h3 class="mb-12 text-2xl">{{current_user.first_name}}'s Rooms</h3>
+                <div class="flex flex-wrap -mx-40">
+                    {% for room in current_user.rooms.all %}
+                        {% include 'mixins/room_card.html' with room=room %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock content %}
+    

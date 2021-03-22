@@ -1,0 +1,24 @@
+{% load i18n %}
+<footer class="container mx-auto text-center py-20 border-t font-medium text-gray-500">
+    <div class="flex flex-col">
+        <span>
+            {% trans "Please don't copy us ;(" %}
+        </span>
+        &copy;2019 Nbnb-clone, by palandovalex@gmail.com {% trans 'All rights reserved.' %}
+    </div>
+    <div class="flex mt-10">
+        {% get_current_language as LANGUAGE_CODE %}
+        <select name="" id="js-lang" class="w-1/5 h-8">
+            <option value="en" 
+                {% if LANGUAGE_CODE == 'en' %} 
+                    selected
+                {% endif %}
+            >English</option>
+            <option value="ru" 
+                {% if LANGUAGE_CODE == 'ru' %} 
+                    selected
+                {% endif %}
+            >Russian</option>
+        </select>
+    </div>
+</footer>

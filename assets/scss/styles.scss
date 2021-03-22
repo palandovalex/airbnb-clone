@@ -1,0 +1,140 @@
+@tailwind base;
+
+@tailwind components;
+
+
+input,
+textarea,
+select{
+    @apply w-full rounded-md py-5 font-medium text-lg text-left border-gray-400 border px-5 mb-1;
+    &:focus{
+        @apply outline-none border-indigo-400;
+    }
+}
+
+textarea {
+    resize: noone;
+    height: 150px;
+}
+
+select{
+    @apply py-1;
+    height: 50px
+}
+
+form{
+    .input{
+        @apply mb-3 w-full;
+        &.has-error{
+            input{
+                @apply bg-red-200;
+            }
+        }
+    }
+}
+
+.search-box{
+    transition: box-shadow .3s linear;
+}
+
+.nav_link {
+    @apply ml-8 border-b-2 border-white h-full flex items-center;
+    a {
+        @apply px-2 py-8;
+    }
+    &:hover {
+        @apply border-gray-600;
+    }
+}
+
+.btn {
+    @apply w-full border-2 rounded-md py-5 text-center font-medium text-lg;
+    &.btn--sm{
+        @apply py-3 rounded-lg;
+    }
+}
+
+.btn-link{
+    @apply w-full border-2 rounded-lg py-3 text-center font-medium text-lg text-white bg-red-500;
+}
+
+@keyframes messageFadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    15%{
+        opacity: 1;
+        transform: translateY(50px);
+    }
+    85%{
+        opacity: 1;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.message{
+    animation: messageFadeIn 5s ease-in-out forwards;
+    @apply font-medium;
+    &.error{
+        @apply bg-red-500;
+    }
+    &.debug{
+        @apply bg-gray-600;
+    }
+    &.info{
+        @apply bg-blue-600;
+    }
+    &.success{
+        @apply bg-green-400;
+    }
+    &.warning{
+        @apply bg-yellow-600;
+    }
+}
+
+.border-section{
+    @apply border-b border-gray-400 pb-4 mb-4;
+}
+
+.text-teal-400 { color: #4fd1c5; }
+
+.text-teal-500 { color: #38b2ac; }
+
+a.teal-link{
+    color: #4fd1c5;
+    &:hover{
+        color: #38b2ac;
+    }
+}
+
+.bg-teal-600{
+    background-color: #319795;
+}
+
+.bg-teal-500{
+    background-color: #38b2ac;
+}
+
+
+.bg-teal-300{
+    background-color: #81e6d9;
+}
+.bg-teal-300-hov{
+    &:hover{
+        background-color: #81e6d9;
+    }
+}
+
+.cal-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+@tailwind utilities;

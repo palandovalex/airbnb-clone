@@ -11,8 +11,18 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import dotenv
-
 from .base_settings import *
+from .base_settings import BASE_DIR
 
-from .production_settings import *
+import dotenv 
+
+dotenv_path = os.path.join(BASE_DIR, '.env')
+if os.path.exists(dotenv_path):
+    dotenv.read_dotenv(dotenv=dotenv_path, override=True)
+
+in_production = os.environ.get("IN_PRODUCTION")=="True"
+if in_production:
+    print("production")
+    from .production_settings import *
+else:
+    from .develop_settings import *
